@@ -1,11 +1,10 @@
+const express = require('express');
 const mongoose = require('mongoose');
 const config = require('../../config.js');
 
+const app = express();
+app.use(express.json());
+
 mongoose.connect(config.mongodb, {useNewUrlParser: true});
 
-const db = mongoose.connection;
-
-db.on('error', console.error.bind(console, 'connection error: '));
-db.once('open', function() {
-    console.log('we in baby')
-});
+app.listen(3000, () => { console.log('we in baby') });
