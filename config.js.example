@@ -1,0 +1,5 @@
+const config = {};
+
+config.mongodb = "mongodb+srv://<user>:<password>@<cluster-name>.brfnf.mongodb.net/<db-name>?retryWrites=true&w=majority";
+
+module.exports = config;
